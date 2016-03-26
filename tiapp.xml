@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>gmusic.com</id>
+    <name>gmusic</name>
+    <version>1.0</version>
+    <publisher>Gilberto</publisher>
+    <url/>
+    <description/>
+    <copyright>2016 by Gilberto</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <!--guid>3d9d27ab-c3b4-4e8f-9444-63df1a94372c</guid-->
+    <guid>af192232-5678-4566-9555-ce48a02fa7a2</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <application android:theme="@style/custom_theme">
+                <receiver>
+                    <intent-filter>
+                       <action android:name="android.intent.action.MEDIA_BUTTON" />
+                     </intent-filter>
+                </receiver>
+            </application>
+            <uses-sdk android:minSdkVersion="19"/>
+            <uses-sdk android:targetSdkVersion="23"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs">ti.cloud</module>
+    </modules>
+    <deployment-targets>
+        <target device="iphone">false</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="mobileweb">false</target>
+        <target device="windows">false</target>
+    </deployment-targets>
+    <sdk-version>5.1.2.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+    <property name="appc-app-id" type="string">56da61277824a93a77c318e6</property>
+    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-development" type="string">EjI0ksqzx4PE3N9cSmGXcvxfBhdnIVf5</property>
+    <property name="acs-oauth-key-development" type="string">GRb9jeiMlhj7qTY5XlBI4hVNXjCI4J0r</property>
+    <property name="acs-api-key-development" type="string">qc6L16VGfR0SrmubMW03LMKXfjiy0dYy</property>
+    <property name="acs-username-development" type="string">appc_app_user_dev</property>
+    <property name="acs-password-development" type="string">1yJW0j0UGLJ7v4rSfU</property>
+    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-production" type="string">8B8g8qZ1IaPrQ1DAIhwjmoHGhTvdMBAn</property>
+    <property name="acs-oauth-key-production" type="string">Nj7JgLBlm8sTDA4KpUKIhxEhfbKDWwwY</property>
+    <property name="acs-api-key-production" type="string">VrkUelbvvwN5hYp7VYTfYpPdOzkq8V1l</property>
+    <property name="acs-username-production" type="string">appc_app_user</property>
+    <property name="acs-password-production" type="string">vOAx0cSB8TbUeEOc2y</property>
+    <property name="appc-org-id" type="string">100089219</property>
+    <property name="appc-creator-user-id" type="string">870a9d21-8656-4d5a-a433-8fe2b1f0aff7</property>
+</ti:app>

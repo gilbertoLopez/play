@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<style name="custom_theme" parent="@style/_custom_theme"/>
+	
+	<!--style name="_custom_theme" parent="@style/Theme.AppCompat"-->
+    <style name="_custom_theme" parent="@style/Theme.AppCompat">
+		<item name="colorPrimary">#042F48</item>
+		<item name="colorAccent">#333333</item>
+		<item name="android:statusBarColor">#0A3954</item>
+		<item name="android:navigationBarColor">#0A3954</item>
+		<item name="android:textColorPrimary">#FFFFFF</item>
+		<item name="android:progressBarStyleHorizontal">@style/ProgressBarcustom_theme</item>
+        <item name="android:seekBarStyle">@style/SeekBarcustom_theme</item>
+        
+		<!--item name="android:windowTranslucentNavigation">true</item-->
+        <!--item name="android:checkboxStyle">@style/CheckBoxcustom_theme</item>
+        <item name="android:buttonStyle">@style/Buttoncustom_theme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtoncustom_theme</item>
+        <item name="android:spinnerStyle">@style/Spinnercustom_theme</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemcustom_theme</item>
+        <item name="android:listViewStyle">@style/ListViewcustom_theme</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewcustom_theme.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemcustom_theme</item-->
+		
+	</style>
+	<style name="custom_theme.NoActionBar" parent="@style/Theme.AppCompat">
+        <!-- AppCompat Compatibility -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

@@ -1,0 +1,20 @@
+<Alloy>
+	<Window id="wSettings" title="Configuración" >
+	    <ActionBar id="abSettings"/>
+	    <ListView id="dirList" defaultItemTemplate="templateDir">
+            <Templates>
+                <ItemTemplate name="templateDir">
+                    <View id="container" bindId="path" height="40">
+                        <View left="0" width="50" top="0" bottom="0">
+                            <Switch/>
+                        </View>
+                        <View left="50" right="5" top="0" bottom="0">
+                            <Label bindId="name" left="0" color="#333"/>
+                        </View>
+                    </View>
+                </ItemTemplate>
+            </Templates>
+            <ListSection/>
+        </ListView>
+	</Window>
+</Alloy>

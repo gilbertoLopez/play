@@ -1,0 +1,25 @@
+<Alloy>
+	<Window id="wAudio" backgroundColor="#000">
+        <ActionBar id="actionbar"/>
+        <View id="viewImagen">
+        	<Label class="black" id="time"/>
+        </View>
+        
+        <Slider id="musicTime"></Slider>
+        <TextArea id="volumen" color="#333" top="0"/>
+        <View id="viewControllers" class="BGCOLOR1">
+             <View class="btn left">
+                <Label class="fa fa-step-backward white"/>
+                <Button id="prev" class="ctrlBtn"/>    
+            </View>
+            <View class="btn">
+                <Label class="fa fa-play white"/>
+                <Button id="pauseResumeButton" class="ctrlBtn"/>    
+            </View>
+        	 <View class="btn right">
+                <Label class="fa fa-step-forward white"/>
+                <Button id="next" class="ctrlBtn"/>    
+            </View>
+        </View>
+    </Window>
+</Alloy>

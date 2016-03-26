@@ -1,0 +1,22 @@
+<Alloy>
+    <Window title="Mi Música">
+        <ActionBar id="actionbar"/>
+        <Menu id="menu" platform="android">
+            <MenuItem id="menu1" onClick="openSettings"/>
+            <MenuItem id="menu2" onClick="openMusic"/>
+        </Menu>
+        <ListView id="musicList" defaultItemTemplate="templateFile">
+            <Templates>
+                <ItemTemplate name="templateFile">
+                    <View id="container" height="40">
+                        <View left="5" right="5" top="0" bottom="0">
+                            <Label bindId="name" left="0" color="#333"/>
+                        </View>
+                    </View>
+                </ItemTemplate>
+            </Templates>
+            <ListSection/>
+        </ListView>
+        <TextArea id="changeL" keyboardType="NUMBER_PAD" color="#000" borderColor="#000" width="300" borderWidth="1" value="0"></TextArea>
+    </Window>
+</Alloy>
