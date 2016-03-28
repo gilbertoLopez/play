@@ -69,7 +69,7 @@
         <target device="iphone">false</target>
         <target device="ipad">false</target>
         <target device="android">true</target>
-        <target device="mobileweb">false</target>
+        <target device="mobileweb">true</target>
         <target device="windows">false</target>
     </deployment-targets>
     <sdk-version>5.1.2.GA</sdk-version>

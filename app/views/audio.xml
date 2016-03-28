@@ -2,7 +2,7 @@
 	<Window id="wAudio" backgroundColor="#000">
         <ActionBar id="actionbar"/>
         <View id="viewImagen">
-        	<Label class="black" id="time"/>
+        	<Label class="white" id="time"/>
         </View>
         
         <Slider id="musicTime"></Slider>
