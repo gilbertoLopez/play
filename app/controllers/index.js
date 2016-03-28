@@ -41,12 +41,8 @@ if( dataDir.length == 0){
 	audioPlayer.setList( playList );
 	List.sections[0].appendItems(data);
 	List.addEventListener("itemclick",function(e){
-	    var sec  = List.sections[e.sectionIndex];
-	    var item = sec.getItemAt(e.itemIndex);
-	    var url  = item.name.value;
-	    var name = item.name.text;
-	    var index = item.name.index;
-	    Alloy.createController("audio",{name:name,index:index}).getView().open();
+	    var item = List.sections[e.sectionIndex].getItemAt(e.itemIndex);
+	    Alloy.createController("audio",{index:item.name.index}).getView().open();
 	});
 	
 	function inBackground(){
