@@ -7,17 +7,18 @@ if ( audioPlayer.getIndex() != args.index ){
 	audioPlayer.play( args.index );
 	$.time.setText( "0.00" );
 }
-var d = audioPlayer.getInfo();
-console.log( d );
-win.setTitle( d.name );
-mT.setMin(0);
-mT.setMax( d.duration );
-mT.setValue( d.currentTime );
 
-console.log(  _.functions(audioPlayer.player) );
+function setView(){    
+    var d = audioPlayer.getInfo();
+    win.setTitle( d.name );
+    mT.setMin(0);
+    mT.setMax( d.duration );
+    mT.setValue( d.currentTime );
+}
+setView();
 
 audioPlayer.player.addEventListener("change",function(e){
-	console.log( e );
+	setView();
 });
 
 mT.addEventListener('start',function(e){
@@ -34,16 +35,25 @@ $.pauseResumeButton.addEventListener('click', function() {
     audioPlayer.tooglePlay( true );
 });
 
+function millisToMinutesAndSeconds(millis) {
+  var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000).toFixed(0);
+  return minutes + ":" +(seconds < 10 ? '0' : '')+ seconds;
+}
+
 audioPlayer.player.addEventListener('progress',function(e) {
-    $.time.setText( parseFloat( Math.ceil( e.progress/1000 )*0.01).toFixed(2) );
+    $.time.setText( millisToMinutesAndSeconds ( e.progress ) );
     mT.setValue( e.progress );
     //Ti.API.info('State: ' + e.description + ' (' + e.progress + ')');
 });
 /*
-audioPlayer.addEventListener('change',function(e){
-	$.time.setText( parseFloat( Math.ceil( e.source.time/1000 )*0.01).toFixed(2) );
+
+
+audioPlayer.player.addEventListener('change',function(e){
+	$.time.setText( millisToMinutesAndSeconds( e.source.time ) );
 });
 
+/*
 audioPlayer.addEventListener('complete',function(e){
     next();
 });

@@ -1,10 +1,16 @@
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	color: "#000"
+	color: "#000",
+	font:{
+		fontSize: 10
+	}
 },
 "#actionbar": {
-    displayHomeAsUp: false
+    displayHomeAsUp: false,
+    font:{
+		fontSize: 10
+	}
 },
 "MenuItem": {
 	showAsAction: Titanium.Android.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW,

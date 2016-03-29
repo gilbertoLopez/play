@@ -1,6 +1,6 @@
 <Alloy>
 	<Window id="wAudio" backgroundColor="#000">
-        <ActionBar id="actionbar"/>
+        <ActionBar id="actionbar" fontSize="9"subtitle="gil"/>
         <View id="viewImagen">
         	<Label class="white" id="time"/>
         </View>

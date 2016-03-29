@@ -13,7 +13,7 @@ function Audio(){
 	this.complete();
 	A = this;
 }
-_.extend( Audio,A.player );
+//_.extend( Audio,A.player );
 Audio.prototype.increment = function(callback){
    callback = callback || function(){};
    var audio = this.player; 
